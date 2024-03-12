@@ -1,18 +1,20 @@
 package com.coderscampus;
+
 //POJO Class
 public class User {
-	
+
 //	instance variables (declared as private)
 	private String username;
 	private String password;
 	private String name;
-	
-	public User (String username, String password, String name) {
+
+	public User(String username, String password, String name) { // Line #36
+		// in UserService Class.
 		this.username = username;
 		this.password = password;
 		this.name = name;
 	}
-	
+
 //	getters and setters for the above instance variables 
 	public String getUsername() {
 		return username;

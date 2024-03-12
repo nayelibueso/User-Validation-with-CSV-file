@@ -1,36 +1,34 @@
 package com.coderscampus;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class UserLoginApplication {
 
 	public static void main(String[] args) {
-		
-		BufferedReader fileReader = null;
-		try {
-			fileReader = new BufferedReader(new FileReader("data.txt"));
 
-			String line = "";
-			while ((line = fileReader.readLine()) != null) {
-				System.out.println(line);
-			}
-		} catch (FileNotFoundException e) {
-			System.out.println("oops, there was an exeption");
-			e.printStackTrace();
-		} catch (IOException e) {
-			System.out.println("oops, there was an I/O Exception");
-		} finally {
+//		String fileName = "data.txt"; 
+		UserService userService = new UserService("data.txt"); // this is where we tell the project what file we are
+																// reading from.
+		Scanner scanner = new Scanner(System.in);
+		int attempts = 0;
 
-			try {
-				fileReader.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+		while (attempts < 5) {
+			System.out.println("Enter usename: ");
+			String username = scanner.nextLine();
+			System.out.println("Enter passowrd");
+			String passowrd = scanner.nextLine();
+
+			User user = userService.validateUser(username, passowrd);
+			if (user != null) {
+				System.out.println("Welcome: " + user.getName());
+				scanner.close();
+				return;
+			} else {
+				attempts++;
+				System.out.println("Invalid log in, please try again.");
 			}
 		}
-		
-		
+		System.out.println("Too many failed login attempts, you are now locked out.");
+		scanner.close();
 	}
 }
