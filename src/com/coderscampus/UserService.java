@@ -1,16 +1,10 @@
 package com.coderscampus;
-
+//Read file.
+//this will validate if input matches the User Arrays.
 
 public class UserService {
 
 	
 }
-//	public User createUser (String username, String passowrd, String name) { //Line #10
-																  //in User Class.
-//		User user = new User();
-//		user.setUsername(username);
-//		user.setPassword(name);
-//		user.setName(name);
-//		return user;
-//	}
+
 
