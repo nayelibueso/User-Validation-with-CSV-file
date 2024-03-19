@@ -4,14 +4,15 @@ package com.coderscampus;
 public class User {
 	String username;
 	String password;
-	String name;
-
-	public User(String username, String password, String name) {
+	String name; 
+	
+	public User (String username, String passowrd, String name) {
 		this.username = username;
 		this.password = password;
-		this.name = name;
+		this.name = name; 
 	}
 // Getter and setters for above instance variables. 
+
 	public String getUsername() {
 		return username;
 	}
@@ -35,5 +36,6 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 }
