@@ -2,16 +2,15 @@ package com.coderscampus;
 
 //POJO Class -> This class will hold the information that will be read from the file.
 public class User {
-	private String username;
-	private String password;
-	private String name; 
+	String username;
+	String password;
+	String name;
 	
 	public User (String username, String passowrd, String name) {
 		this.username = username;
 		this.password = password;
 		this.name = name; 
 	}
-// Getter and setters for above instance variables. 
 
 	public String getUsername() {
 		return username;
@@ -36,6 +35,8 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
 
 
 }
