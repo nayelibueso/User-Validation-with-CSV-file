@@ -1,12 +1,11 @@
 package com.coderscampus;
 
-//POJO Class -> This class will hold the information that will be read from the file.
 public class User {
 	String username;
 	String password;
 	String name;
 	
-	public User (String username, String passowrd, String name) {
+	public User (String username, String password, String name) {
 		this.username = username;
 		this.password = password;
 		this.name = name; 
