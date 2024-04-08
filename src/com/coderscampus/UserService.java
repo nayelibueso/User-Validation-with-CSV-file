@@ -50,7 +50,7 @@ import java.io.IOException;
 		public User validateUsers(String username, String password) {
 			for (User user : users) {
 				if (user != null && user.getUsername().equalsIgnoreCase(username)
-						&& user.getPassword().equalsIgnoreCase(password)) {
+						&& user.getPassword().equals(password)) {
 					return user;
 				}
 			}
